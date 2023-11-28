@@ -10,7 +10,7 @@
 
 This example demonstrates how to use client appointment objects and methods to implement an appointment edit forms with custom fields that operate via client scripts.
 
-![scheduler-appointment-edit-form](.png)
+![](scheduler-appointment-edit-form.png)
 
 ## Files to Review
 

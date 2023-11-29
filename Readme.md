@@ -1,33 +1,20 @@
 <!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128547044/15.2.4%2B)
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E1547)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
-* [CustomEvents.cs](./CS/WebSite/App_Code/CustomEvents.cs) (VB: [CustomEvents.vb](./VB/WebSite/App_Code/CustomEvents.vb))
-* [CustomResources.cs](./CS/WebSite/App_Code/CustomResources.cs) (VB: [CustomResources.vb](./VB/WebSite/App_Code/CustomResources.vb))
-* [DataHelper.cs](./CS/WebSite/App_Code/DataHelper.cs) (VB: [DataHelper.vb](./VB/WebSite/App_Code/DataHelper.vb))
-* [Default.aspx](./CS/WebSite/Default.aspx) (VB: [Default.aspx](./VB/WebSite/Default.aspx))
-* [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
-* [DefaultObjectDataSource.ascx](./CS/WebSite/DefaultObjectDataSource.ascx) (VB: [DefaultObjectDataSource.ascx](./VB/WebSite/DefaultObjectDataSource.ascx))
-* [DefaultObjectDataSource.ascx.cs](./CS/WebSite/DefaultObjectDataSource.ascx.cs) (VB: [DefaultObjectDataSource.ascx.vb](./VB/WebSite/DefaultObjectDataSource.ascx.vb))
-* [ScriptAppointmentForm.ascx](./CS/WebSite/UserForms/ScriptAppointmentForm.ascx) (VB: [ScriptAppointmentForm.ascx](./VB/WebSite/UserForms/ScriptAppointmentForm.ascx))
-* [ScriptAppointmentForm.ascx.cs](./CS/WebSite/UserForms/ScriptAppointmentForm.ascx.cs) (VB: [ScriptAppointmentForm.ascx.vb](./VB/WebSite/UserForms/ScriptAppointmentForm.ascx.vb))
-* [ScriptRecurrenceForm.ascx](./CS/WebSite/UserForms/ScriptRecurrenceForm.ascx) (VB: [ScriptRecurrenceForm.ascx](./VB/WebSite/UserForms/ScriptRecurrenceForm.ascx))
-* [ScriptRecurrenceForm.ascx.cs](./CS/WebSite/UserForms/ScriptRecurrenceForm.ascx.cs) (VB: [ScriptRecurrenceForm.ascx.vb](./VB/WebSite/UserForms/ScriptRecurrenceForm.ascx.vb))
-<!-- default file list end -->
-# How to implement a client-side appointment editing form with custom fields
+# Scheduler for ASP.NET Web Forms - How to implement an appointment edit form with custom fields on the client
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/e1547/)**
 <!-- run online end -->
 
+This example demonstrates how to use client appointment objects and methods to implement an appointment edit form with custom fields that operate through client scripts.
 
-<p>This example illustrates the use of the client-side appointment objects and methods to implement an appointment editing forms with custom fields that operate via client scripts.<br />
-In this example, popup menu commands are intercepted by JavaScript functions, which create the <a href="http://documentation.devexpress.com/#AspNet/clsDevExpressWebASPxSchedulerScriptsASPxClientAppointmenttopic">ASPxClientAppointment</a> for the selected interval and resource or use the client Scheduler’s <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxSchedulerScriptsASPxClientScheduler_GetSelectedAppointmentIdstopic">GetSelectedAppointmentIds</a> and <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxSchedulerScriptsASPxClientScheduler_GetAppointmentByIdtopic">GetAppointmentById</a> methods to obtain the client appointment. Then, the <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxSchedulerScriptsASPxClientScheduler_RefreshClientAppointmentPropertiestopic">RefreshClientAppointmentProperties</a> method updates the client appointment properties and invokes the scripting appointment form.<br />
-The scripting appointment editing form consists of two templates – ScriptAppointmentForm.ascx and ScriptRecurrenceForm.ascx. Their code implements the logic required to populate the form’s controls and update the appointment with new values. When the button on the form is pressed, one of the following methods of the client scheduler: <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxSchedulerScriptsASPxClientScheduler_UpdateAppointmenttopic">UpdateAppointment</a>, <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxSchedulerScriptsASPxClientScheduler_InsertAppointmenttopic">InsertAppointment</a> or <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxSchedulerScriptsASPxClientScheduler_DeleteAppointmenttopic">DeleteAppointment</a> - is called. This method performs a callback using information contained in the client appointment. The appointment is then processed on the server.</p><p>Note that ASPxScheduler versions prior to 9.2.10 demonstrates erroneous behavior of the client-side appointment form concerning the recurrence pattern. Custom fields are not updated when the client form is invoked to edit the series. It is reported as issue <a href="https://www.devexpress.com/Support/Center/p/B143010">Client-side appointment editing form - Custom field isn't updated in recurrence pattern</a>.</p>
+![](scheduler-appointment-edit-form.png)
 
-<br/>
+## Files to Review
 
-
+* [Default.aspx](./CS/WebSite/Default.aspx) (VB: [Default.aspx](./VB/WebSite/Default.aspx))
+* [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
+* [ScriptAppointmentForm.ascx](./CS/WebSite/UserForms/ScriptAppointmentForm.ascx) (VB: [ScriptAppointmentForm.ascx](./VB/WebSite/UserForms/ScriptAppointmentForm.ascx))
+* [ScriptRecurrenceForm.ascx](./CS/WebSite/UserForms/ScriptRecurrenceForm.ascx) (VB: [ScriptRecurrenceForm.ascx](./VB/WebSite/UserForms/ScriptRecurrenceForm.ascx))

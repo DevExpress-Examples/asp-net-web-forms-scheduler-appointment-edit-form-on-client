@@ -8,7 +8,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/e1547/)**
 <!-- run online end -->
 
-This example demonstrates how to use client appointment objects and methods to implement an appointment edit forms with custom fields that operate via client scripts.
+This example demonstrates how to use client appointment objects and methods to implement an appointment edit form with custom fields that operate through client scripts.
 
 ![](scheduler-appointment-edit-form.png)
 

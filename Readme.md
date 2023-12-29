@@ -5,9 +5,6 @@
 <!-- default badges end -->
 
 # Scheduler for ASP.NET Web Forms - How to implement an appointment edit form with custom fields on the client
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128547044/)**
-<!-- run online end -->
 
 This example demonstrates how to use client appointment objects and methods to implement an appointment edit form with custom fields that operate through client scripts.
 
